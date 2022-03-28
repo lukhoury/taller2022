@@ -17,15 +17,15 @@ void draw() {
   if(mousePressed){
   
    noStroke();
-  fill(0, 11);
+  fill(0, 9); //con esto se modifica la velocidad con la que va cambiando el fondo
   rect(0, 0, 1000, 1000);
-  strokeWeight(10);
+  strokeWeight(1);
   stroke((250-pmouseX/4), mouseY/(500/255), sq(sq(pmouseX/(100/51)-sq(pmouseY/(100/51)))));
   line(pmouseX, pmouseY, mouseX, mouseY);
   }
   
   noFill();
-  strokeWeight(0.5);
+  strokeWeight(1);
   stroke(random(255));
   float dsprt=1.8;
 
@@ -44,9 +44,9 @@ void draw() {
   bezier(a, b, c, d, e, f, a, b);
   translate(width/2, height/2);
   bezier(a, b, c, d, e, f, a, b);
-  translate(width/2, height/3);
+  translate(-width/2, height/3);
   bezier(a, b, c, d, e, f, a, b);
-  translate(width/2, height/4);
+  translate(width/2, -height/7);
   bezier(a, b, c, d, e, f, a, b);
 
  
